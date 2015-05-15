@@ -1,7 +1,7 @@
 """
 Created on Wed Apr 22 15:15:16 2015
 
-@author: rkp
+@author: tc
 
 Quiz 2 code.
 """
@@ -22,11 +22,9 @@ with open(FILENAME, 'rb') as f:
     
 stim = data['stim']
 rho = data['rho']
-    
 
-# Fill in these values
-sampling_period = 1# in ms
-num_timesteps = 3
+sampling_period = 2 # in ms
+num_timesteps = 150
 
 sta = compute_sta(stim, rho, num_timesteps)
 

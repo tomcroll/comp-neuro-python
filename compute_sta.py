@@ -1,7 +1,7 @@
 """
 Created on Wed Apr 22 15:21:11 2015
 
-@author: rkp
+@author: tc
 
 Code to compute spike-triggered average.
 """
@@ -30,7 +30,7 @@ def compute_sta(stim, rho, num_timesteps):
 
     # Fill in this value. Note that you should not count spikes that occur
     # before 300 ms into the recording.
-    num_spikes = 100
+    num_spikes = np.count_nonzero(spike_times)
     
     # Compute the spike-triggered average of the spikes found.
     # To do this, compute the average of all of the vectors
@@ -41,5 +41,17 @@ def compute_sta(stim, rho, num_timesteps):
     # element-wise manner.
     # 
     # Your code goes here.
+    # Loop through the spike_times, summing the accumulating (summing and adding together)
+    # the stimuli for each spike (150) samples to temp vector, then divide
+    # vector by number of spikes to get sta
     
+    stimx = np.zeros((num_timesteps,))
+
+    numchunks = num_spikes
+
+    for spike in spike_times[:numchunks]:
+        stimx = stimx + stim[(spike-150):spike]
+
+    sta = [x/numchunks for x in stimx]
+
     return sta
