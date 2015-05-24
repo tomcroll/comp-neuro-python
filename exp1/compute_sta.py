@@ -28,7 +28,7 @@ def compute_sta(stim, rho, num_timesteps):
     # after 300 ms into the recording.
     spike_times = rho[num_timesteps+1:].nonzero()[0] + num_timesteps
 
-    # Fill in this value. Note that you should not count spikes that occur
+    # Vaue should not count spikes that occur
     # before 300 ms into the recording.
     num_spikes = np.count_nonzero(spike_times)
     
@@ -40,7 +40,6 @@ def compute_sta(stim, rho, num_timesteps):
     # spike. The average of these vectors should be completed in an
     # element-wise manner.
     # 
-    # Your code goes here.
     # Loop through the spike_times, summing the accumulating (summing and adding together)
     # the stimuli for each spike (150) samples to temp vector, then divide
     # vector by number of spikes to get sta

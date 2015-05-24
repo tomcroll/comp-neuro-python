@@ -3,7 +3,7 @@ Created on Wed Apr 22 15:15:16 2015
 
 @author: tc
 
-Quiz 2 code.
+Exp3 code.
 """
 
 from __future__ import division
