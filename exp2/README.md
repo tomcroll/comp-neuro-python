@@ -1,4 +1,4 @@
- Likelihood ratio test with asymmetric costs
+Likelihood ratio test with asymmetric costs
 
 Suppose we have a stimulus defined by a single variable called s. s can take one of two values, which we will call s1 and s2. You could think of these as lights flashing in the eyes at one of two possible frequencies. Or perhaps listening to punk rock vs. listening to Dvorak.
 
@@ -20,5 +20,5 @@ Which of these firing rates would make the best decision threshold for us in det
 
 5.830
 5.667
-5.978
+5.978 - correct answer from likelihood_ratio_costed.py
 2.69

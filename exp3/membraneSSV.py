@@ -5,6 +5,8 @@ Created on Wed Apr 22 15:53:00 2015
 Charging and discharging curves for passive membrane patch
 TC
 
+Find Maximum Steady State Voltage
+
 translated to Python by tc 2015
 """
 

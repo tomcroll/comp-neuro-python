@@ -8,8 +8,6 @@ two independent stimuli.
 """
 
 from __future__ import division
-#import numpy as np
-#import matplotlib.pyplot as plt
 import matplotlib.mlab as mlab
 
 
@@ -23,7 +21,7 @@ two independent stimuli.
         meanS1: mean of firing rate distribution triggered by stimulus 1
         sdS1: standard deviation of firing rate distribution triggered by stimulus 1
         meanS2: mean of firing rate distribution triggered by stimulus 2
-        sdS1: standard deviation of firing rate distribution triggered by stimulus 1
+        sdS1: standard deviation of firing rate distribution triggered by stimulus 2
 
     Returns:
         neuronal firing tate as which to set optimum costed threshold"""
@@ -34,8 +32,8 @@ two independent stimuli.
         Ps1 = mlab.normpdf(threshold, meanS1, sdS1)
         Ps2 = mlab.normpdf(threshold, meanS2, sdS2)
 
-        ratio_raw = Ps1 / Ps2
-        ratio = round(ratio_raw, 2)
+        ratio_raw = Ps2 / Ps1  # make likelihood twice for Ps2
+        ratio = round(ratio_raw, 1)
 
         print "Ps1 = %s, Ps2 = %s. Threshold = %s. Ratio raw = %s Weight = %s\n" % (Ps1, Ps2, threshold, ratio_raw, ratio)
         if ratio == weight:

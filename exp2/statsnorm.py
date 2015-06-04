@@ -1,4 +1,5 @@
-''' basic normal distribution
+''' 
+Basic normal distribution
 
 Author: tc
 '''
